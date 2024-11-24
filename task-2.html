@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login/Signup Forms</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      body {
+        background-color: #2563eb;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+      }
+
+      .container {
+        display: flex;
+        gap: 20px;
+        max-width: 1000px;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .form-container {
+        background: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 400px;
+      }
+
+      h2 {
+        margin-bottom: 20px;
+        color: #333;
+      }
+
+      .input-group {
+        margin-bottom: 15px;
+      }
+
+      input[type="email"],
+      input[type="password"] {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        outline: none;
+        transition: border-color 0.3s;
+      }
+
+      input[type="email"]:focus,
+      input[type="password"]:focus {
+        border-color: #2563eb;
+      }
+
+      button {
+        width: 100%;
+        padding: 12px;
+        background-color: #2563eb;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s;
+      }
+
+      button:hover {
+        background-color: #1d4ed8;
+      }
+
+      .social-login {
+        margin-top: 20px;
+      }
+
+      .social-button {
+        width: 100%;
+        padding: 12px;
+        margin: 10px 0;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        background: white;
+        transition: background-color 0.3s;
+      }
+
+      .facebook {
+        background: #1877f2;
+        color: white;
+      }
+
+      .google {
+        background: white;
+        color: #333;
+      }
+
+      .divider {
+        text-align: center;
+        margin: 20px 0;
+        color: #666;
+      }
+
+      .forgot-password {
+        text-align: right;
+        margin: 10px 0;
+      }
+
+      .forgot-password a {
+        color: #2563eb;
+        text-decoration: none;
+        font-size: 14px;
+      }
+
+      .switch-form {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 14px;
+        color: #666;
+      }
+
+      .switch-form a {
+        color: #2563eb;
+        text-decoration: none;
+        margin-left: 5px;
+      }
+
+      @media (max-width: 768px) {
+        .container {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .form-container {
+          max-width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Login Form -->
+      <div class="form-container">
+        <h2>Login</h2>
+        <form action="#" method="POST">
+          <div class="input-group">
+            <input type="email" placeholder="Email" required />
+          </div>
+          <div class="input-group">
+            <input
+              type="password"
+              placeholder="Password"
+              required
+              minlength="8"
+            />
+          </div>
+          <div class="forgot-password">
+            <a href="#">Forgot password?</a>
+          </div>
+          <button type="submit">Login</button>
+          <div class="divider">Or</div>
+          <div class="social-login">
+            <button type="button" class="social-button facebook">
+              Login with Facebook
+            </button>
+            <button type="button" class="social-button google">
+              Login with Google
+            </button>
+          </div>
+          <div class="switch-form">
+            Don't have an account?<a href="#">Signup</a>
+          </div>
+        </form>
+      </div>
+
+      <!-- Signup Form -->
+      <div class="form-container">
+        <h2>Signup</h2>
+        <form action="#" method="POST">
+          <div class="input-group">
+            <input type="email" placeholder="Email" required />
+          </div>
+          <div class="input-group">
+            <input
+              type="password"
+              placeholder="Create password"
+              required
+              minlength="8"
+            />
+          </div>
+          <div class="input-group">
+            <input
+              type="password"
+              placeholder="Confirm password"
+              required
+              minlength="8"
+            />
+          </div>
+          <button type="submit">Signup</button>
+          <div class="divider">Or</div>
+          <div class="social-login">
+            <button type="button" class="social-button facebook">
+              Login with Facebook
+            </button>
+            <button type="button" class="social-button google">
+              Login with Google
+            </button>
+          </div>
+          <div class="switch-form">
+            Already have an account?<a href="#">Login</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

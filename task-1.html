@@ -1,0 +1,342 @@
+<!doctype html>
+<html>
+  <head>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+
+      .timetable {
+        border-collapse: collapse;
+        width: 100%;
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+
+      .timetable th {
+        background-color: #1a237e;
+        color: white;
+        padding: 12px;
+        text-align: center;
+        border: 1px solid #ddd;
+      }
+
+      .timetable td {
+        border: 1px solid #ddd;
+        padding: 10px;
+        text-align: center;
+        position: relative;
+      }
+
+      .time-col {
+        background-color: #f5f5f5;
+        font-weight: bold;
+        white-space: nowrap;
+      }
+
+      .class-cell {
+        position: relative;
+        cursor: pointer;
+      }
+
+      .tooltip {
+        visibility: hidden;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: white;
+        text-align: center;
+        padding: 8px;
+        border-radius: 4px;
+        position: absolute;
+        z-index: 1;
+        bottom: 125%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 200px;
+        font-size: 14px;
+      }
+
+      .class-cell:hover .tooltip {
+        visibility: visible;
+      }
+
+      .morning-fitness {
+        background-color: #e3f2fd;
+      }
+
+      .inquiry {
+        background-color: #e8f5e9;
+      }
+
+      .art {
+        background-color: #fce4ec;
+      }
+
+      .pe {
+        background-color: #e1f5fe;
+      }
+
+      .literacy {
+        background-color: #fff9c4;
+      }
+
+      .math {
+        background-color: #e1bee7;
+      }
+
+      .motor-skills {
+        background-color: #b3e5fc;
+      }
+
+      .outdoor {
+        background-color: #f0f4c3;
+      }
+
+      .ict {
+        background-color: #f5f5f5;
+      }
+
+      .drama {
+        background-color: #ffecb3;
+      }
+
+      .music {
+        background-color: #ffe0b2;
+      }
+
+      .cca {
+        background-color: #f5f5f5;
+      }
+
+      .lunch {
+        background-color: #ffebee;
+      }
+
+      .penmanship {
+        background-color: #fff3e0;
+      }
+
+      .social {
+        background-color: #e0f7fa;
+      }
+    </style>
+  </head>
+  <body>
+    <table class="timetable">
+      <thead>
+        <tr>
+          <th>TIMINGS/DAYS</th>
+          <th>MONDAY</th>
+          <th>TUESDAY</th>
+          <th>WEDNESDAY</th>
+          <th>THURSDAY</th>
+          <th>FRIDAY</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="time-col">8:30 am - 9:00 am</td>
+          <td colspan="5" class="class-cell morning-fitness">
+            Arrival & Morning Fitness
+            <span class="tooltip"
+              >Time: 8:30 AM - 9:00 AM<br />Activity: Morning Fitness<br />Teacher:
+              Mr. Johnson</span
+            >
+          </td>
+        </tr>
+        <tr>
+          <td class="time-col">9:00 am - 10:00 am</td>
+          <td colspan="4" class="class-cell inquiry">
+            Inquiry
+            <span class="tooltip"
+              >Time: 9:00 AM - 10:00 AM<br />Subject: Inquiry Learning<br />Teacher:
+              Ms. Smith</span
+            >
+          </td>
+          <td rowspan="3" class="class-cell motor-skills">
+            Outdoor Learning, Motor Skills, and P.E.
+            <span class="tooltip"
+              >Time: 9:00 AM - 10:30 AM<br />Activities: Outdoor Learning &
+              PE<br />Teacher: Mr. Thompson</span
+            >
+          </td>
+        </tr>
+        <tr>
+          <td class="time-col">10:00 am - 10:30 am</td>
+          <td colspan="4" class="class-cell">
+            Snack
+            <span class="tooltip"
+              >Time: 10:00 AM - 10:30 AM<br />Activity: Snack Break<br />Supervisor:
+              Class Teacher</span
+            >
+          </td>
+        </tr>
+        <tr>
+          <td class="time-col">10:30 am - 11:15 am</td>
+          <td class="class-cell art">
+            Art
+            <span class="tooltip"
+              >Time: 10:30 AM - 11:15 AM<br />Subject: Art<br />Teacher: Ms.
+              Davis</span
+            >
+          </td>
+          <td class="class-cell literacy">
+            Literacy
+            <span class="tooltip"
+              >Time: 10:30 AM - 11:15 AM<br />Subject: Literacy<br />Teacher:
+              Mrs. Wilson</span
+            >
+          </td>
+          <td class="class-cell literacy">
+            Literacy
+            <span class="tooltip"
+              >Time: 10:30 AM - 11:15 AM<br />Subject: Literacy<br />Teacher:
+              Mrs. Wilson</span
+            >
+          </td>
+          <td class="class-cell literacy">
+            Literacy
+            <span class="tooltip"
+              >Time: 10:30 AM - 11:15 AM<br />Subject: Literacy<br />Teacher:
+              Mrs. Wilson</span
+            >
+          </td>
+        </tr>
+        <tr>
+          <td class="time-col">11:15 am - 12:00 nn</td>
+          <td class="class-cell pe">
+            P.E.
+            <span class="tooltip"
+              >Time: 11:15 AM - 12:00 PM<br />Subject: Physical Education<br />Teacher:
+              Mr. Thompson</span
+            >
+          </td>
+          <td class="class-cell math">
+            Math
+            <span class="tooltip"
+              >Time: 11:15 AM - 12:00 PM<br />Subject: Mathematics<br />Teacher:
+              Mr. Brown</span
+            >
+          </td>
+          <td class="class-cell math">
+            Math
+            <span class="tooltip"
+              >Time: 11:15 AM - 12:00 PM<br />Subject: Mathematics<br />Teacher:
+              Mr. Brown</span
+            >
+          </td>
+          <td class="class-cell math">
+            Math
+            <span class="tooltip"
+              >Time: 11:15 AM - 12:00 PM<br />Subject: Mathematics<br />Teacher:
+              Mr. Brown</span
+            >
+          </td>
+          <td class="class-cell motor-skills">
+            Outdoor Learning, Motor Skills, and P.E.
+            <span class="tooltip"
+              >Time: 11:15 AM - 12:00 PM<br />Subject: Physical Education<br />Teacher:
+              Mr. Thompson</span
+            >
+          </td>
+        </tr>
+        <tr>
+          <td class="time-col">12:00 nn - 1:00 pm</td>
+          <td colspan="5" class="class-cell lunch">
+            Lunch / Recess
+            <span class="tooltip"
+              >Time: 12:00 PM - 1:00 PM<br />Activity: Lunch and Break<br />Supervisor:
+              Duty Teachers</span
+            >
+          </td>
+        </tr>
+        <tr>
+          <td class="time-col">1:00 pm - 1:45 pm</td>
+          <td class="class-cell penmanship">
+            Penmanship / Fine Motor Skills*
+            <span class="tooltip"
+              >Time: 1:00 PM - 1:45 PM<br />Subject: Penmanship<br />Teacher:
+              Ms. Anderson</span
+            >
+          </td>
+          <td class="class-cell">
+            Self-regulation*
+            <span class="tooltip"
+              >Time: 1:00 PM - 1:45 PM<br />Subject: Self-regulation<br />Teacher:
+              Ms. Parker</span
+            >
+          </td>
+          <td class="class-cell social">
+            Socio-emotional Learning*
+            <span class="tooltip"
+              >Time: 1:00 PM - 1:45 PM<br />Subject: Social Skills<br />Teacher:
+              Ms. Roberts</span
+            >
+          </td>
+          <td class="class-cell">
+            Collaborative Learning*
+            <span class="tooltip"
+              >Time: 1:00 PM - 1:45 PM<br />Subject: Group Activities<br />Teacher:
+              Mr. Lewis</span
+            >
+          </td>
+          <td class="class-cell social">
+            Social Skills*
+            <span class="tooltip"
+              >Time: 1:00 PM - 1:45 PM<br />Subject: Social Skills<br />Teacher:
+              Ms. Roberts</span
+            >
+          </td>
+        </tr>
+        <tr>
+          <td class="time-col">1:45 pm - 2:30 pm</td>
+          <td class="class-cell ict">
+            ICT
+            <span class="tooltip"
+              >Time: 1:45 PM - 2:30 PM<br />Subject: Information Technology<br />Teacher:
+              Mr. Carter</span
+            >
+          </td>
+          <td class="class-cell outdoor">
+            Outdoor Play
+            <span class="tooltip"
+              >Time: 1:45 PM - 2:30 PM<br />Activity: Outdoor Activities<br />Teacher:
+              Ms. Green</span
+            >
+          </td>
+          <td class="class-cell outdoor">
+            Outdoor Play
+            <span class="tooltip"
+              >Time: 1:45 PM - 2:30 PM<br />Activity: Outdoor Activities<br />Teacher:
+              Ms. Green</span
+            >
+          </td>
+          <td class="class-cell drama">
+            Speech and Drama
+            <span class="tooltip"
+              >Time: 1:45 PM - 2:30 PM<br />Subject: Drama<br />Teacher: Ms.
+              Taylor</span
+            >
+          </td>
+          <td class="class-cell music">
+            Music
+            <span class="tooltip"
+              >Time: 1:45 PM - 2:30 PM<br />Subject: Music<br />Teacher: Mr.
+              White</span
+            >
+          </td>
+        </tr>
+        <tr>
+          <td class="time-col">2:30 pm - 4:00 pm</td>
+          <td colspan="5" class="class-cell cca">
+            CCA
+            <span class="tooltip"
+              >Time: 2:30 PM - 4:00 PM<br />Activity: Co-Curricular
+              Activities<br />Various Teachers</span
+            >
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
